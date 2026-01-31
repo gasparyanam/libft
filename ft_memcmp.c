@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 18:32:22 by agaspary          #+#    #+#             */
-/*   Updated: 2026/01/31 11:52:03 by agaspary         ###   ########.fr       */
+/*   Created: 2026/01/31 15:27:29 by agaspary          #+#    #+#             */
+/*   Updated: 2026/01/31 16:14:51 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+	size_t				i;
 
 	i = 0;
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
 	while (i < n)
 	{
-		if ((unsigned char)s1[1] != (unsigned char)s2[i])
-			return ((unsigned char)s[i] - (unsigned char)s2[i]);
-		if (s[i] == '\0')
-			return (0);
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
 		i++;
 	}
 	return (0);

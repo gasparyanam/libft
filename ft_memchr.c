@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 18:32:22 by agaspary          #+#    #+#             */
-/*   Updated: 2026/01/31 11:52:03 by agaspary         ###   ########.fr       */
+/*   Created: 2026/01/31 11:54:15 by agaspary          #+#    #+#             */
+/*   Updated: 2026/01/31 16:13:42 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	const unsigned char	*p;
 
-	i = 0;
-	while (i < n)
+	p = (const unsigned char *)s;
+	while (n--)
 	{
-		if ((unsigned char)s1[1] != (unsigned char)s2[i])
-			return ((unsigned char)s[i] - (unsigned char)s2[i]);
-		if (s[i] == '\0')
-			return (0);
-		i++;
+		if (*p == (unsigned char)c)
+			return ((void *)p);
+		p++;
 	}
-	return (0);
+	return (NULL);
 }

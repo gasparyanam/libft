@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 18:32:22 by agaspary          #+#    #+#             */
-/*   Updated: 2026/01/31 11:52:03 by agaspary         ###   ########.fr       */
+/*   Created: 2026/01/26 14:51:24 by agaspary          #+#    #+#             */
+/*   Updated: 2026/01/26 15:02:12 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_isalpha(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if ((unsigned char)s1[1] != (unsigned char)s2[i])
-			return ((unsigned char)s[i] - (unsigned char)s2[i]);
-		if (s[i] == '\0')
-			return (0);
-		i++;
-	}
-	return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }

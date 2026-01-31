@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/30 18:32:22 by agaspary          #+#    #+#             */
-/*   Updated: 2026/01/31 11:52:03 by agaspary         ###   ########.fr       */
+/*   Created: 2026/01/28 14:32:53 by agaspary          #+#    #+#             */
+/*   Updated: 2026/01/28 14:52:11 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlcat(char *dest, const char *src, size_t dbuffer)
 {
+	size_t	dlen;
+	size_t	slen;
 	size_t	i;
 
 	i = 0;
-	while (i < n)
-	{
-		if ((unsigned char)s1[1] != (unsigned char)s2[i])
-			return ((unsigned char)s[i] - (unsigned char)s2[i]);
-		if (s[i] == '\0')
-			return (0);
+	slen = 0;
+	while (dest[i] && i < dbuffer)
 		i++;
-	}
-	return (0);
+	dlen = i;
+	while (i + 1 < dbuffer && src[slen])
+		dest[i++] = src[slen++];
+	if (i < dbuffer)
+		dest[i] = '\0';
+	while (src[slen])
+		slen++;
+	return (dlen + slen);
 }
