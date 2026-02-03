@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/31 11:54:15 by agaspary          #+#    #+#             */
-/*   Updated: 2026/02/02 10:58:04 by agaspary         ###   ########.fr       */
+/*   Created: 2026/02/02 17:08:22 by agaspary          #+#    #+#             */
+/*   Updated: 2026/02/02 17:35:44 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const unsigned char	*p;
+	char	*str;
+	size_t	len1;
+	size_t	len;
 
-	p = (const unsigned char *)s;
-	while (n--)
-	{
-		if (*p == (unsigned char)c)
-			return ((void *)p);
-		p++;
-	}
-	return (NULL);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	len1 = ft_strlen(s1);
+	len = ft_strlen(s2) + len1;
+	str = (char *)malloc(len + 1);
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s1, len1 + 1);
+	ft_strlcat(str, s2, len + 1);
+	return (str);
 }

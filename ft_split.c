@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/31 11:54:15 by agaspary          #+#    #+#             */
-/*   Updated: 2026/02/02 10:58:04 by agaspary         ###   ########.fr       */
+/*   Created: 2026/02/03 13:52:27 by agaspary          #+#    #+#             */
+/*   Updated: 2026/02/03 16:18:35 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	const unsigned char	*p;
 
-	p = (const unsigned char *)s;
-	while (n--)
+char	**ft_split(char const *s, char c)
+{
+		
+}
+
+int main()
+{
+	char text[] = "National_Polytechinc_University_of_Armenia";
+	char t = '_';
+	char **ptr = ft_split(text, t);
+	for (int i = 0; &ptr[i]; i++)
 	{
-		if (*p == (unsigned char)c)
-			return ((void *)p);
-		p++;
+		for (int j = 0; ptr[i][j]; j++)
+		{
+			printf("%c", ptr[i][j]);
+		}
+		printf("\n");
 	}
-	return (NULL);
 }

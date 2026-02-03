@@ -6,7 +6,7 @@
 /*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:27:48 by agaspary          #+#    #+#             */
-/*   Updated: 2026/01/27 16:48:57 by agaspary         ###   ########.fr       */
+/*   Updated: 2026/02/02 11:03:16 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (d == NULL && s == NULL)
+		return (NULL);
 	while (len > 0)
 	{
 		*d = *s;
