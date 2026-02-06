@@ -6,7 +6,7 @@
 /*   By: agaspary <agaspary@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 12:03:31 by agaspary          #+#    #+#             */
-/*   Updated: 2026/02/04 16:39:14 by agaspary         ###   ########.fr       */
+/*   Updated: 2026/02/06 13:09:59 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t len);
@@ -35,11 +36,15 @@ char	*ft_strdup(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t dbuffer);
 size_t	ft_strlcpy(char *dest, const char *src, size_t dsize);
 size_t	ft_strlen(const char *s);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 #endif
