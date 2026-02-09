@@ -169,7 +169,7 @@ Functions are grouped by purpose to improve readability.
 
 ---
 
-### Part 3: Linked List Functions
+### Part 3: Linked List
 
 #### List Structure
 
@@ -181,7 +181,7 @@ typedef struct s_list
 }   t_list;
 ```
 
-#### List Operations
+#### Linked List Functions
 
 | Function          | Description                                            |
 | ----------------- | ------------------------------------------------------ |
@@ -226,5 +226,6 @@ All implementation decisions and code were written and understood by the author,
 ## License
 
 This project is part of the 42 School curriculum and is intended for educational purposes only.
+
 
 
