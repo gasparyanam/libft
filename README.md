@@ -12,8 +12,8 @@
   - [String Functions](#string-functions)
   - [Memory Functions](#memory-functions)
   - [Conversion Functions](#conversion-functions)
-  - [String Creation, Manipulation, Iteration](#string-creation)
-  - [File Descriptor Output](#output-functions)
+  - [String Creation, Manipulation, Iteration](#string-creation-manipulation-iteration)
+  - [File Output Functions](#file-output-functions)
   - [Linked List Functions](#linked-list-functions)
 - [Resources](#resources)
 - [Author](#author)
@@ -147,7 +147,7 @@ Functions are grouped by purpose to improve readability.
 
 ### Part 2: Additional Functions
 
-#### String Creation, Manipulation, Iteration
+#### String Creation Manipulation Iteration
 
 | Function     | Description                                             |
 | ------------ | ------------------------------------------------------- |
@@ -158,7 +158,7 @@ Functions are grouped by purpose to improve readability.
 | `ft_strmapi`  | Applies a function to each character and returns a new string |
 | `ft_striteri` | Applies a function to each character in-place                 |
  
-#### File Descriptor Output
+#### File Output Functions
 
 | Function        | Description                             |
 | --------------- | --------------------------------------- |
@@ -226,4 +226,5 @@ All implementation decisions and code were written and understood by the author,
 ## License
 
 This project is part of the 42 School curriculum and is intended for educational purposes only.
+
 
