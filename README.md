@@ -2,6 +2,22 @@
 
 *This project has been created as part of the 42 curriculum by agaspary.*
 
+## Table of Contents
+
+- [Description](#description)
+- [Instructions](#instructions)
+- [Usage](#usage)
+- [Function Reference](#function-reference)
+  - [Character Function](#character-functions)
+  - [String Functions](#string-functions)
+  - [Memory Functions](#memory-functions)
+  - [Conversion Functions](#conversion-functions)
+  - [String Creation, Manipulation, Iteration](#string-creation)
+  - [File Descriptor Output](#output-functions)
+  - [Linked List Functions](#linked-list-functions)
+- [Resources](#resources)
+- [Author](#author)
+
 ## Description
 
 **Libft** is a custom C library developed as a foundational project in the 42 curriculum. The goal of this project is to recreate a selection of standard C library functions from scratch in order to deeply understand how they work internally.
@@ -84,7 +100,7 @@ Functions are grouped by purpose to improve readability.
 
 ### Part 1: Libc Functions
 
-#### Character Classification
+#### Character Functions
 
 | Function     | Description                                      |
 | ------------ | ------------------------------------------------ |
@@ -96,7 +112,7 @@ Functions are grouped by purpose to improve readability.
 | `ft_toupper` | Converts a character to uppercase                |
 | `ft_tolower` | Converts a character to lowercase                |
 
-#### String Handling
+#### String Functions
 
 | Function     | Description                                             |
 | ------------ | ------------------------------------------------------- |
@@ -109,7 +125,7 @@ Functions are grouped by purpose to improve readability.
 | `ft_strlcat` | Concatenates strings with size limitation               |
 | `ft_strdup`  | Allocates and returns a duplicate of a string           |
 
-#### Memory Handling
+#### Memory Functions
 
 | Function     | Description                                 |
 | ------------ | ------------------------------------------- |
@@ -121,7 +137,7 @@ Functions are grouped by purpose to improve readability.
 | `ft_memcmp`  | Compares two memory areas                   |
 | `ft_calloc`  | Allocates memory and initializes it to zero |
 
-#### Conversion
+#### Conversion Functions
 
 | Function  | Description                     |
 | --------- | ------------------------------- |
@@ -210,3 +226,4 @@ All implementation decisions and code were written and understood by the author,
 ## License
 
 This project is part of the 42 School curriculum and is intended for educational purposes only.
+
