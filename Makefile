@@ -55,9 +55,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $^
 
-debug: CFLAGS += -g -fsanitize=address -fno-omit-frame-pointer
-debug: re
-
 %.o: %.c libft.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -69,4 +66,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all debug complete clean fclean re
+.PHONY: all clean fclean re
