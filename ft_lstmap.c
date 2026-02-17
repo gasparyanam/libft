@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agaspary <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: agaspary <agaspary@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:33:44 by agaspary          #+#    #+#             */
-/*   Updated: 2026/02/07 16:20:29 by agaspary         ###   ########.fr       */
+/*   Updated: 2026/02/13 16:43:51 by agaspary         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		newcont = f(lst->content);
+	
 		newnode = ft_lstnew(newcont);
 		if (!newnode)
 		{

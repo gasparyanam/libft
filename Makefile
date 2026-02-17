@@ -55,7 +55,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $^
 
-%.o: %.c libft.h Makefile
+%.o: %.c libft.h Makefile  #relink (animast tex kverahasceavorvi ete popoxutyun lini makefile kam header file mej)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
